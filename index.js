@@ -74,13 +74,13 @@ if(command === "say" && ['248521740945195008', '301020093247127552', '4716173467
                         msg.edit({embed});
             });
         }
-if (message.content.startsWith(".avatar")){
+if (message.content.startsWith("!avatar")){
     let user = message.mentions.users.first();
     if (!user) user = message.author;
     let embed = new Discord.RichEmbed()
     .setColor("0C6BCD")
     .setImage("user.avatarURL")
-    message.channel.send(embed)
+    message.channel.send({embed});
 }
 
 
