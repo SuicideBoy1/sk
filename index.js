@@ -79,7 +79,7 @@ if (message.content.startsWith("!avatar")){
     if (!user) user = message.author;
     let embed = new Discord.RichEmbed()
     .setColor("0C6BCD")
-    .setImage("user.avatarURL")
+    .setImage(user.avatarURL)
     message.channel.send({embed});
 }
 
