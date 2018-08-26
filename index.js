@@ -45,9 +45,6 @@ if (message.channel.id == '480879077600002049') {
     multipleReact(message, ['483325848749998080', '483325856748666890'])
 }
 
-if (message.content.startWith("test")){
-   message.channel.send("test")
-}
   if (command === "h"){
    message.delete();
     if(!args[0]) return message.channel.send("**Введите пользователя у которого вы хотите проверить хромосом.** `.h <пользователь>`");
