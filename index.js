@@ -77,7 +77,10 @@ if(command === "say" && ['248521740945195008', '301020093247127552', '4716173467
 if (message.content.startsWith(".avatar")){
     let user = message.mentions.users.first();
     if (!user) user = message.author;
-    message.channel.send(user.avatarURL)
+    let embed = new Discord.RichEmbed()
+    .setColor("0C6BCD")
+    .setDescription("user.avatarURL")
+    message.channel.send(embed)
 }
 
 
