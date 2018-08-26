@@ -67,7 +67,7 @@ if(command === "say" && ['248521740945195008', '301020093247127552', '4716173467
             message.channel.send("Загрузка.").then(msg => {
                 const urls = ['https://static.hentai-gifs.com/upload/20160506/14/27150/1.gif', 'https://pa1.narvii.com/6851/3ac4cfd86a1e1b3710b537354ad7bfc3926e3e7a_hq.gif', 'https://cdn.discordapp.com/attachments/428290347534123008/477554884124606476/e5uGpgk.gif', 'https://cdn.discordapp.com/attachments/428290347534123008/477554893205536778/85b54d01ce6898f555e0a66eb54a01ab.gif', 'https://gifs.wetgif.com/hentai-16.gif', 'https://gifs.wetgif.com/porno-anime-46.gif', 'https://cdn.discordapp.com/attachments/428290347534123008/477555514994196481/6981fee72bcd6f3898ddef378bc84.gif', 'https://gifs.wetgif.com/hentai-32.gif', 'https://static.hentai-gifs.com/upload/20160426/3/5738/detail.gif', 'https://static.hentai-gifs.com/upload/20160425/1/1891/detail.gif'];
                     let embed = new Discord.RichEmbed()
-                        .setDescription(`${user} выебал ${user1}.`)
+                        .setDescription(`${user} занялся сексом с ${user1}.`)
                         .setImage(urls[Math.floor(Math.random() * urls.length)])
                         .setColor('RANDOM')
                         .setTimestamp(); 
