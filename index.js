@@ -74,6 +74,12 @@ if(command === "say" && ['248521740945195008', '301020093247127552', '4716173467
                         msg.edit({embed});
             });
         }
+if (message.content.startsWith(".avatar")){
+    let user = message.mentions.users.first();
+    if (!user) user = message.author;
+    message.channel.send(user.avatarURL)
+}
+
 
     if (message.member.hasPermission('MANAGE_GUILD') || message.member.hasPermission('ADMINISTRATOR') || message.member.id === message.guild.owner.id) {
         if (message.content === '!stay') {stop.push(message.guild.id); return message.channel.send('Готово');}
