@@ -37,6 +37,11 @@ if(command === "say" && ['248521740945195008', '301020093247127552', '4716173467
     message.channel.send(sayMessage);
   }
 
+if (message.channel.id == '480879077600002049') {
+    message.react("✅")
+    message.react("❎");
+}
+
   if (command === "h"){
    message.delete();
     if(!args[0]) return message.channel.send("**Введите пользователя у которого вы хотите проверить хромосом.** `.h <пользователь>`");
