@@ -9,11 +9,11 @@ const emojis = {
     no:'483325856748666890',
 };
 
-const prefix = ".";
+const prefix = "s!";
 
 //------------------------------------------------------------------------
 bot.on('ready', () => {
-    bot.user.setPresence({ game: { name: `на ►СВЕРХКОНФУ`, type: 3 } }).catch();
+    bot.user.setPresence({ game: { name: `за чатом`, type: 3 } }).catch();
 });
 //------------------------------------------------------------------------
 async function color () {
@@ -46,9 +46,8 @@ if (message.channel.id == '480879077600002049') {
     message.react('483325856748666890');
 }
 
-  if (command === "h"){
+  if (message.content.startsWith(`${prefix}hromosoma)){
    message.delete();
-    if(!args[0]) return message.channel.send("**Введите пользователя у которого вы хотите проверить хромосом.** `.h <пользователь>`");
     let replies = ["45 <:Hromosoma:471283165944610836>", "46 <:Hromosoma:471283165944610836>", "47 <:Hromosoma:471283165944610836>", "48 <:Hromosoma:471283165944610836>", "49 <:Hromosoma:471283165944610836>", "50 <:Hromosoma:471283165944610836>", "51 <:Hromosoma:471283165944610836>", "52 <:Hromosoma:471283165944610836>", "53 <:Hromosoma:471283165944610836>", "54 <:Hromosoma:471283165944610836>", "55 <:Hromosoma:471283165944610836>", "56 <:Hromosoma:471283165944610836>", "57 <:Hromosoma:471283165944610836>", "58 <:Hromosoma:471283165944610836>", "59 <:Hromosoma:471283165944610836>", "60 <:Hromosoma:471283165944610836>", "61 <:Hromosoma:471283165944610836>", "62 <:Hromosoma:471283165944610836>", "63 <:Hromosoma:471283165944610836>", "64 <:Hromosoma:471283165944610836>", " 65 <:Hromosoma:471283165944610836>", "66 <:Hromosoma:471283165944610836>", "67 <:Hromosoma:471283165944610836>", "68 <:Hromosoma:471283165944610836>", "69 <:Hromosoma:471283165944610836>", "70 <:Hromosoma:471283165944610836>", "71 <:Hromosoma:471283165944610836>", "72 <:Hromosoma:471283165944610836>", "73 <:Hromosoma:471283165944610836>", "74 <:Hromosoma:471283165944610836>", "75 <:Hromosoma:471283165944610836>", "76 <:Hromosoma:471283165944610836>", "77 <:Hromosoma:471283165944610836>", "78 <:Hromosoma:471283165944610836>", "79 <:Hromosoma:471283165944610836>", "80 <:Hromosoma:471283165944610836>", "81 <:Hromosoma:471283165944610836>", "82 <:Hromosoma:471283165944610836>", "83 <:Hromosoma:471283165944610836>", "84 <:Hromosoma:471283165944610836>", "85 <:Hromosoma:471283165944610836>", "86 <:Hromosoma:471283165944610836>", "87 <:Hromosoma:471283165944610836>", "88 <:Hromosoma:471283165944610836>", "89 <:Hromosoma:471283165944610836>", "90 <:Hromosoma:471283165944610836>", "91 <:Hromosoma:471283165944610836>", "92 <:Hromosoma:471283165944610836>", "93 <:Hromosoma:471283165944610836>", "94 <:Hromosoma:471283165944610836>", "95 <:Hromosoma:471283165944610836>", "96 <:Hromosoma:471283165944610836>", "97 <:Hromosoma:471283165944610836>", "98 <:Hromosoma:471283165944610836>", "99 <:Hromosoma:471283165944610836>", "100 <:Hromosoma:471283165944610836>"];
 
     let result = Math.floor((Math.random() * replies.length));
@@ -57,7 +56,6 @@ if (message.channel.id == '480879077600002049') {
     if (!user) user = message.author;
     let embed = new Discord.RichEmbed()
 
-    .setAuthor(message.author.username,message.author.avatarURL)
     .setColor('RANDOM')
     .addField("Пользователь:", user)
     .addField("Хромосомы:", replies[result]);
@@ -83,7 +81,7 @@ if (message.channel.id == '480879077600002049') {
                         msg.edit({embed});
             });
         }
-if (message.content.startsWith("!avatar")){
+if (message.content.startsWith(`${prefix}avatar`)) {
     let user = message.mentions.users.first();
     if (!user) user = message.author;
     let embed = new Discord.RichEmbed()
