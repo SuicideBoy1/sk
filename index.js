@@ -46,23 +46,6 @@ if (message.channel.id == '480879077600002049') {
     message.react('483325856748666890');
 }
 
-  if (message.content.startsWith(`${prefix}h`)){
-   message.delete();
-    let replies = ["45 <:Hromosoma:471283165944610836>", "46 <:Hromosoma:471283165944610836>", "47 <:Hromosoma:471283165944610836>", "48 <:Hromosoma:471283165944610836>", "49 <:Hromosoma:471283165944610836>", "50 <:Hromosoma:471283165944610836>", "51 <:Hromosoma:471283165944610836>", "52 <:Hromosoma:471283165944610836>", "53 <:Hromosoma:471283165944610836>", "54 <:Hromosoma:471283165944610836>", "55 <:Hromosoma:471283165944610836>", "56 <:Hromosoma:471283165944610836>", "57 <:Hromosoma:471283165944610836>", "58 <:Hromosoma:471283165944610836>", "59 <:Hromosoma:471283165944610836>", "60 <:Hromosoma:471283165944610836>", "61 <:Hromosoma:471283165944610836>", "62 <:Hromosoma:471283165944610836>", "63 <:Hromosoma:471283165944610836>", "64 <:Hromosoma:471283165944610836>", " 65 <:Hromosoma:471283165944610836>", "66 <:Hromosoma:471283165944610836>", "67 <:Hromosoma:471283165944610836>", "68 <:Hromosoma:471283165944610836>", "69 <:Hromosoma:471283165944610836>", "70 <:Hromosoma:471283165944610836>", "71 <:Hromosoma:471283165944610836>", "72 <:Hromosoma:471283165944610836>", "73 <:Hromosoma:471283165944610836>", "74 <:Hromosoma:471283165944610836>", "75 <:Hromosoma:471283165944610836>", "76 <:Hromosoma:471283165944610836>", "77 <:Hromosoma:471283165944610836>", "78 <:Hromosoma:471283165944610836>", "79 <:Hromosoma:471283165944610836>", "80 <:Hromosoma:471283165944610836>", "81 <:Hromosoma:471283165944610836>", "82 <:Hromosoma:471283165944610836>", "83 <:Hromosoma:471283165944610836>", "84 <:Hromosoma:471283165944610836>", "85 <:Hromosoma:471283165944610836>", "86 <:Hromosoma:471283165944610836>", "87 <:Hromosoma:471283165944610836>", "88 <:Hromosoma:471283165944610836>", "89 <:Hromosoma:471283165944610836>", "90 <:Hromosoma:471283165944610836>", "91 <:Hromosoma:471283165944610836>", "92 <:Hromosoma:471283165944610836>", "93 <:Hromosoma:471283165944610836>", "94 <:Hromosoma:471283165944610836>", "95 <:Hromosoma:471283165944610836>", "96 <:Hromosoma:471283165944610836>", "97 <:Hromosoma:471283165944610836>", "98 <:Hromosoma:471283165944610836>", "99 <:Hromosoma:471283165944610836>", "100 <:Hromosoma:471283165944610836>"];
-
-    let result = Math.floor((Math.random() * replies.length));
-    
-   let user = message.mentions.users.first();
-    if (!user) user = message.author;
-    let embed = new Discord.RichEmbed()
-
-    .setColor('RANDOM')
-    .addField("Пользователь:", user)
-    .addField("Хромосомы:", replies[result]);
-
-    return message.channel.send(embed)
-  }
-
 if (message.content.startsWith(`${prefix}ship`)) {
 
     message.delete();
@@ -73,60 +56,60 @@ if (message.content.startsWith(`${prefix}ship`)) {
      let user3 = message.guild.member(message.guild.members.get(args[2]));
   
      if (bondLevel > 100 ) {
-        var ship = 'Идеальная пара ♥ :ok_hand:'
-        var bondLevelResults = `♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥`
+        var ship = 'Идеальная пара  :ok_hand:'
+        var bondLevelResults = ``
     } else
     if (bondLevel == 100) {
         var ship = 'Ммм. yже не так плоxо <3 :ok_hand:'
-        var bondLevelResults = `♥♥♥♥♥♥♥♥♥♥`
+        var bondLevelResults = ``
     } else
     if (bondLevel >= 90 && bondLevel < 100) {
         var ship = 'Отличная пара <3'
-        var bondLevelResults = `♥♥♥♥♥♥♥♥♥🖤`
+        var bondLevelResults = ``
     } else
     if (bondLevel >= 80 && bondLevel < 90) {
         var ship = 'Отличная пара <3'
-        var bondLevelResults = `♥♥♥♥♥♥♥♥🖤🖤`
+        var bondLevelResults = ``
     } else
     if (bondLevel >= 75 && bondLevel < 80) {
         var ship = 'Отличная пара <3'
-        var bondLevelResults = `♥♥♥♥♥♥♥🖤🖤🖤`
+        var bondLevelResults = ``
     } else
     if (bondLevel >= 70 && bondLevel < 75) {
         var ship = 'Немного рискованно, но может работать! '
-        var bondLevelResults = '♥♥♥♥♥♥♥🖤🖤🖤'
+        var bondLevelResults = ''
     } else
     if (bondLevel >= 60 && bondLevel < 70) {
         var ship = 'не все потеряно.'
-        var bondLevelResults = '♥♥♥♥♥♥🖤🖤🖤🖤'
+        var bondLevelResults = ''
     } else
     if (bondLevel >= 50 && bondLevel < 60) {
         var ship = '=/. '
-        var bondLevelResults = `♥♥♥♥♥🖤🖤🖤🖤🖤`
+        var bondLevelResults = ``
     } else
     if (bondLevel >= 40 && bondLevel < 50) {
         var ship = '... '
-        var bondLevelResults = `♥♥♥♥🖤🖤🖤🖤🖤🖤`
+        var bondLevelResults = ``
     } else
     if (bondLevel >= 30 && bondLevel < 40) {
         var ship = 'Все плохо.'
-        var bondLevelResults = `♥♥♥🖤🖤🖤🖤🖤🖤🖤`
+        var bondLevelResults = ``
     } else
     if (bondLevel >= 25 && bondLevel < 30) {
         var ship = 'я не бyдy комментировать'
-        var bondLevelResults = `♥♥🖤🖤🖤🖤🖤🖤🖤🖤`
+        var bondLevelResults = ``
     } else
     if (bondLevel >= 20 && bondLevel < 25) {
         var ship = 'Rip'
-        var bondLevelResults = `♥♥🖤🖤🖤🖤🖤🖤🖤🖤`
+        var bondLevelResults = ``
     } else
     if (bondLevel >= 10 && bondLevel < 20) {
         var ship = 'Rip'
-        var bondLevelResults = `​♥🖤🖤🖤🖤🖤🖤🖤🖤🖤`
+        var bondLevelResults = `​`
     } else
     if (bondLevel >= 0 && bondLevel < 10) {
         var ship = 'Невозможно...'
-        var bondLevelResults = `🖤🖤🖤🖤🖤🖤🖤🖤🖤🖤`
+        var bondLevelResults = ``
     }
   
       if(!args[1]){
@@ -196,7 +179,7 @@ if (message.content.startsWith(`${prefix}slap`)) {
                     .setColor("#007fff")
                     .setTimestamp(); 
                     msg.edit({embed});   
-                    msg.react('🤜');
+                    msg.react('');
             } catch (e) {
                 console.log(e)
             }
@@ -223,7 +206,7 @@ if (message.content.startsWith(`${prefix}kiss`)) {
                     .setColor("#007fff")
                     .setTimestamp(); 
                     msg.edit({embed});  
-                    msg.react('😘'); 
+                    msg.react(''); 
             } catch (e) {
                 console.log(e)
             }
@@ -250,7 +233,7 @@ if (message.content.startsWith(`${prefix}pat`)) {
                     .setColor("#007fff")
                     .setTimestamp(); 
                     msg.edit({embed});  
-                    msg.react('✋');
+                    msg.react('');
             } catch (e) {
                 console.log(e)
             }
@@ -277,7 +260,7 @@ if (message.content.startsWith(`${prefix}hug`)) {
                     .setColor("#007fff")
                     .setTimestamp(); 
                     msg.edit({embed});
-                    msg.react('🤝');
+                    msg.react('');
             } catch (e) {
                 console.log(e)
             }
@@ -304,7 +287,7 @@ if (message.content.startsWith(`${prefix}nom`)) {
                     .setColor("#007fff")
                     .setTimestamp(); 
                     msg.edit({embed});
-                    msg.react('🍔');
+                    msg.react('');
             } catch (e) {
                 console.log(e)
             }
@@ -349,7 +332,7 @@ if (message.content.startsWith(`${prefix}suicide`)) {
                         .setColor("#007fff")
                         .setTimestamp(); 
                         msg.edit({embed});
-                        msg.react('💀');
+                        msg.react('');
                 });
             }
     if (message.content.startsWith(`${prefix}kill`)) {
@@ -369,7 +352,7 @@ if (message.content.startsWith(`${prefix}suicide`)) {
                         .setColor("#007fff")
                         .setTimestamp(); 
                         msg.edit({embed});
-                        msg.react('🔪');
+                        msg.react('');
             });
         }
         if (message.content.startsWith(`${prefix}sad`)) {
@@ -383,7 +366,7 @@ if (message.content.startsWith(`${prefix}suicide`)) {
                                 .setColor("#007fff")
                                 .setTimestamp(); 
                                 msg.edit({embed});
-                                msg.react('😭');
+                                msg.react('');
                         });
                     }
             if (message.content.startsWith(`${prefix}happy`)) {
@@ -397,7 +380,7 @@ if (message.content.startsWith(`${prefix}suicide`)) {
                                     .setColor("#007fff")
                                     .setTimestamp(); 
                                     msg.edit({embed});
-                                    msg.react('😌');
+                                    msg.react('');
                             });
                         }
                         if (message.content.startsWith(`${prefix}smoke`)) {
@@ -411,7 +394,7 @@ if (message.content.startsWith(`${prefix}suicide`)) {
                                             .setColor("007fff")
                                             .setTimestamp(); 
                                             msg.edit({embed});
-                                            msg.react('🚬');
+                                            msg.react('');
                                     });
                                 }
 
