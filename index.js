@@ -57,59 +57,59 @@ if (message.content.startsWith(`${prefix}ship`)) {
   
      if (bondLevel > 100 ) {
         var ship = 'Идеальная пара  :ok_hand:'
-        var bondLevelResults = `♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥`
+        var bondLevelResults = ``
     } else
     if (bondLevel == 100) {
         var ship = 'Ммм. yже не так плоxо <3 :ok_hand:'
-        var bondLevelResults = `♥♥♥♥♥♥♥♥♥♥`
+        var bondLevelResults = ``
     } else
     if (bondLevel >= 90 && bondLevel < 100) {
         var ship = 'Отличная пара <3'
-        var bondLevelResults = `♥♥♥♥♥♥♥♥♥🖤`
+        var bondLevelResults = ``
     } else
     if (bondLevel >= 80 && bondLevel < 90) {
         var ship = 'Отличная пара <3'
-        var bondLevelResults = `♥♥♥♥♥♥♥♥🖤🖤`
+        var bondLevelResults = ``
     } else
     if (bondLevel >= 75 && bondLevel < 80) {
         var ship = 'Отличная пара <3'
-        var bondLevelResults = `♥♥♥♥♥♥♥🖤🖤🖤`
+        var bondLevelResults = ``
     } else
     if (bondLevel >= 70 && bondLevel < 75) {
         var ship = 'Немного рискованно, но может работать! '
-        var bondLevelResults = '♥♥♥♥♥♥♥🖤🖤🖤'
+        var bondLevelResults = ''
     } else
     if (bondLevel >= 60 && bondLevel < 70) {
         var ship = 'не все потеряно.'
-        var bondLevelResults = '♥♥♥♥♥♥🖤🖤🖤🖤'
+        var bondLevelResults = ''
     } else
     if (bondLevel >= 50 && bondLevel < 60) {
         var ship = '=/. '
-        var bondLevelResults = `♥♥♥♥♥🖤🖤🖤🖤🖤`
+        var bondLevelResults = ``
     } else
     if (bondLevel >= 40 && bondLevel < 50) {
         var ship = '... '
-        var bondLevelResults = `♥♥♥♥🖤🖤🖤🖤🖤🖤`
+        var bondLevelResults = ``
     } else
     if (bondLevel >= 30 && bondLevel < 40) {
         var ship = 'Все плохо.'
-        var bondLevelResults = `♥♥♥🖤🖤🖤🖤🖤🖤🖤`
+        var bondLevelResults = ``
     } else
     if (bondLevel >= 25 && bondLevel < 30) {
         var ship = 'я не бyдy комментировать'
-        var bondLevelResults = `♥♥🖤🖤🖤🖤🖤🖤🖤🖤`
+        var bondLevelResults = ``
     } else
     if (bondLevel >= 20 && bondLevel < 25) {
         var ship = 'Rip'
-        var bondLevelResults = `♥♥🖤🖤🖤🖤🖤🖤🖤🖤`
+        var bondLevelResults = ``
     } else
     if (bondLevel >= 10 && bondLevel < 20) {
         var ship = 'Rip'
-        var bondLevelResults = `♥🖤🖤🖤🖤🖤🖤🖤🖤🖤`
+        var bondLevelResults = ``
     } else
     if (bondLevel >= 0 && bondLevel < 10) {
         var ship = 'Невозможно...'
-        var bondLevelResults = `🖤🖤🖤🖤🖤🖤🖤🖤🖤🖤`
+        var bondLevelResults = ``
     }
   
       if(!args[1]){
@@ -179,7 +179,7 @@ if (message.content.startsWith(`${prefix}slap`)) {
                     .setColor("#007fff")
                     .setTimestamp(); 
                     msg.edit({embed});   
-                    msg.react('🤜');
+                    msg.react('');
             } catch (e) {
                 console.log(e)
             }
@@ -206,7 +206,7 @@ if (message.content.startsWith(`${prefix}kiss`)) {
                     .setColor("#007fff")
                     .setTimestamp(); 
                     msg.edit({embed});  
-                    msg.react('😘'); 
+                    msg.react(''); 
             } catch (e) {
                 console.log(e)
             }
@@ -233,7 +233,7 @@ if (message.content.startsWith(`${prefix}pat`)) {
                     .setColor("#007fff")
                     .setTimestamp(); 
                     msg.edit({embed});  
-                    msg.react('✋');
+                    msg.react('');
             } catch (e) {
                 console.log(e)
             }
@@ -260,7 +260,7 @@ if (message.content.startsWith(`${prefix}hug`)) {
                     .setColor("#007fff")
                     .setTimestamp(); 
                     msg.edit({embed});
-                    msg.react('🤝');
+                    msg.react('');
             } catch (e) {
                 console.log(e)
             }
@@ -287,7 +287,7 @@ if (message.content.startsWith(`${prefix}nom`)) {
                     .setColor("#007fff")
                     .setTimestamp(); 
                     msg.edit({embed});
-                    msg.react('🍔');
+                    msg.react('');
             } catch (e) {
                 console.log(e)
             }
@@ -436,6 +436,6 @@ if (message.content.startsWith(`${prefix}avatar`)) {
 //------------------------------------------------------------
 //------------------------------------------------------------
 
-});
+}
 
 bot.login(process.env.BOT_TOKEN);
