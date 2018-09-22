@@ -332,7 +332,7 @@ if (message.content.startsWith(`${prefix}suicide`)) {
                         .setColor("#007fff")
                         .setTimestamp(); 
                         msg.edit({embed});
-                        msg.react('💀');
+                        msg.react('');
                 });
             }
     if (message.content.startsWith(`${prefix}kill`)) {
@@ -352,7 +352,7 @@ if (message.content.startsWith(`${prefix}suicide`)) {
                         .setColor("#007fff")
                         .setTimestamp(); 
                         msg.edit({embed});
-                        msg.react('🔪');
+                        msg.react('');
             });
         }
         if (message.content.startsWith(`${prefix}sad`)) {
@@ -366,7 +366,7 @@ if (message.content.startsWith(`${prefix}suicide`)) {
                                 .setColor("#007fff")
                                 .setTimestamp(); 
                                 msg.edit({embed});
-                                msg.react('😭');
+                                msg.react('');
                         });
                     }
             if (message.content.startsWith(`${prefix}happy`)) {
@@ -380,7 +380,7 @@ if (message.content.startsWith(`${prefix}suicide`)) {
                                     .setColor("#007fff")
                                     .setTimestamp(); 
                                     msg.edit({embed});
-                                    msg.react('😌');
+                                    msg.react('');
                             });
                         }
                         if (message.content.startsWith(`${prefix}smoke`)) {
@@ -394,7 +394,7 @@ if (message.content.startsWith(`${prefix}suicide`)) {
                                             .setColor("007fff")
                                             .setTimestamp(); 
                                             msg.edit({embed});
-                                            msg.react('🚬');
+                                            msg.react('');
                                     });
                                 }
 
@@ -436,6 +436,6 @@ if (message.content.startsWith(`${prefix}avatar`)) {
 //------------------------------------------------------------
 //------------------------------------------------------------
 
-}
+});
 
 bot.login(process.env.BOT_TOKEN);
