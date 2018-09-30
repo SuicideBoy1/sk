@@ -119,7 +119,7 @@ if (message.content.startsWith(`${prefix}ship`)) {
     } else
     if (bondLevel >= 10 && bondLevel < 20) {
         var ship = 'Rip'
-        var bondLevelResults = `​♥🖤🖤🖤🖤🖤🖤🖤🖤🖤`
+        var bondLevelResults = `♥🖤🖤🖤🖤🖤🖤🖤🖤🖤`
     } else
     if (bondLevel >= 0 && bondLevel < 10) {
         var ship = 'Невозможно...'
@@ -432,7 +432,7 @@ if (message.content.startsWith(`${prefix}suicide`)) {
             .setTimestamp()
             .setColor(c[0])
             .setImage(user.avatarURL)
-            .setFooter('Galactic🌟Empire | k!avatar @user', 'https://cdn.discordapp.com/attachments/471411944880996353/471412895314608148/GE_Avatar_4.png');
+            .setFooter('►СВЕРХКОНФА | s!avatar', 'https://cdn.discordapp.com/attachments/407984018118672385/490605668274012186/FunDZNs_4.png')
         message.channel.send({embed});
     } )
   }
