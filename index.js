@@ -42,7 +42,6 @@ if(command === "say" && ['248521740945195008', '301020093247127552', '4716173467
   }
 
 if(command === "embed" && ['248521740945195008', '301020093247127552', '471617346751168512', '471617594864959498'].includes(message.author.id)){
-    let embed = new Discord.RichEmbed.()
 
 const embedsayMessage = args.join(" ");
       
@@ -173,7 +172,6 @@ if (message.content.startsWith(`${prefix}ship`)) {
           return message.channel.send(bondEmbed)
       }
   }
-
 
 if (message.content.startsWith(`${prefix}slap`)) {
     if(!args[0]) return message.channel.send('```s!slap @user\n\nУдарить пользователя.```');
