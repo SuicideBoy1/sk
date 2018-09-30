@@ -41,14 +41,17 @@ if(command === "say" && ['248521740945195008', '301020093247127552', '4716173467
     message.channel.send(sayMessage);
   }
 
-if(command === "esay" && ['248521740945195008', '301020093247127552', '471617346751168512', '471617594864959498'].includes(message.author.id)){
+if(command === "embed" && ['248521740945195008', '301020093247127552', '471617346751168512', '471617594864959498'].includes(message.author.id)){
     let embed = new Discord.RichEmbed.()
-	const sayMessage = args.join(" ");
-	
+
+const embedsayMessage = args.join(" ");
+      
+        const embed = new Discord.RichEmbed()
 	.setColor("#007fff")
-	.setDescription(sayMessage);
-    message.delete().catch(O_o=>{});
-    message.channel.send(embed);
+        if (embedsayMessage)
+       embed .setDescription(embedsayMessage)
+        message.channel.send({embed});
+        message.delete().catch(O_o => {});
   }
 
 
@@ -170,6 +173,7 @@ if (message.content.startsWith(`${prefix}ship`)) {
           return message.channel.send(bondEmbed)
       }
   }
+
 
 if (message.content.startsWith(`${prefix}slap`)) {
     if(!args[0]) return message.channel.send('```s!slap @user\n\nУдарить пользователя.```');
