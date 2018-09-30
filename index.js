@@ -41,6 +41,17 @@ if(command === "say" && ['248521740945195008', '301020093247127552', '4716173467
     message.channel.send(sayMessage);
   }
 
+if(command === "esay" && ['248521740945195008', '301020093247127552', '471617346751168512', '471617594864959498'].includes(message.author.id)){
+    let embed = new Discord.RichEmbed.()
+	const sayMessage = args.join(" ");
+	
+	.setColor("#007fff")
+	.setDescription(sayMessage);
+    message.delete().catch(O_o=>{});
+    message.channel.send(embed);
+  }
+
+
 if (message.channel.id == '480879077600002049') {
     message.react('483325848749998080') 
     message.react('483325856748666890');
