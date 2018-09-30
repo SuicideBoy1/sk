@@ -422,15 +422,10 @@ if (message.content.startsWith(`${prefix}suicide`)) {
         }
     if (message.content.startsWith(`${prefix}avatar`)) {
         message.delete();
-        let user = message.mentions.users.first();
-        if (!user) user = message.author;
         let embed = new Discord.RichEmbed()
-            .setAuthor(user.username,user.avatarURL)
-            .setDescription(`Аватарка ${user}`)
-            .setTimestamp()
             .setColor('RANDOM')
             .setImage(user.avatarURL)
-            .setFooter('►СВЕРХКОНФА | s!avatar', 'https://cdn.discordapp.com/attachments/407984018118672385/490605668274012186/FunDZNs_4.png')
+         
         message.channel.send({embed});
   }
 
