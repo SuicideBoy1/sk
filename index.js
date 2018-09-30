@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const fs = require("fs");
 const forEachTimeout = require ('foreach-timeout');
+const getImageColors = require('get-image-colors');
 const bot = new Discord.Client();
 const colors = ["FF0D00","FF2800","FF3D00","FF4F00","FF5F00","FF6C00","FF7800","FF8300","FF8C00","FF9500","FF9E00","FFA500","FFAD00","FFB400","FFBB00","FFC200","FFC900","FFCF00","FFD600","FFDD00","FFE400","FFEB00","FFF200","FFFA00","F7FE00","E5FB00","D5F800","C6F500","B7F200","A8F000","98ED00","87EA00","74E600","5DE100","41DB00","1DD300","00C618","00BB3F","00B358","00AC6B","00A67C","009E8E","028E9B","06799F","0969A2","0C5DA5","0E51A7","1047A9","133CAC","1531AE","1924B1","1F1AB2","2A17B1","3415B0","3C13AF","4512AE","4E10AE","560EAD","600CAC","6A0AAB","7608AA","8506A9","9702A7","AD009F","BC008D","C7007D","D0006E","D8005F","DF004F","E7003E","EF002A","F80012"];
 const stop = [];
@@ -419,14 +420,22 @@ if (message.content.startsWith(`${prefix}suicide`)) {
                         msg.edit({embed});
             });
         }
-if (message.content.startsWith(`${prefix}avatar`)) {
-    let user = message.mentions.users.first();
-    if (!user) user = message.author;
-    let embed = new Discord.RichEmbed()
-    .setColor("0C6BCD")
-    .setImage(user.avatarURL)
-    message.channel.send({embed});
-}
+    if (message.content.startsWith(`${prefix}avatar`)) {
+        message.delete();
+        let user = message.mentions.users.first();
+        if (!user) user = message.author;
+        getImageColors(user.avatarURL).then(color => {
+            let c = color.map(col => col.hex());
+        let embed = new Discord.RichEmbed()
+            .setAuthor(user.username,user.avatarURL)
+            .setDescription(`Аватарка ${user}`)
+            .setTimestamp()
+            .setColor(c[0])
+            .setImage(user.avatarURL)
+            .setFooter('Galactic🌟Empire | k!avatar @user', 'https://cdn.discordapp.com/attachments/471411944880996353/471412895314608148/GE_Avatar_4.png');
+        message.channel.send({embed});
+    } )
+  }
 
 
     if (message.member.hasPermission('MANAGE_GUILD') || message.member.hasPermission('ADMINISTRATOR') || message.member.id === message.guild.owner.id) {
