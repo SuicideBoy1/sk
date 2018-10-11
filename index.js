@@ -403,15 +403,6 @@ if (message.content.startsWith(`${prefix}suicide`)) {
                         msg.edit({embed});
             });
         }
-    if (message.content.startsWith(`${prefix}avatar`)) {
-        message.delete();
-        let embed = new Discord.RichEmbed()
-            .setColor('RANDOM')
-            .setImage(user.avatarURL)
-         
-        message.channel.send({embed});
-  }
-
 //------------------------------------------------------------
 //------------------------------------------------------------
 //------------------------------------------------------------
