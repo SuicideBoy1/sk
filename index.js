@@ -165,7 +165,7 @@ if (message.content.startsWith(`${prefix}slap`)) {
         user = bot.user;
         user1 = message.author;
     }
-        message.channel.send("Загрузка.").then(msg => {
+        message.channel.send(`${bot.emojis.get(emojis.loading)}`).then(msg => {
         request('https://nekos.life/api/v2/img/slap', function (error, response, body) {
             try {
                 let arr = JSON.parse(body);
@@ -184,14 +184,14 @@ if (message.content.startsWith(`${prefix}slap`)) {
 }
 
 if (message.content.startsWith(`${prefix}kiss`)) {
-    if(!args[0]) return message.channel.send('```s!kiss @user\n\nПоцеловать пользователя.```');
+    if(!args[0]) return message.channel.send('```k!kiss @user\n\nПоцеловать пользователя.```');
     let user = message.author;
     let user1 = message.mentions.users.first();
     if (!user1 || user1.id === user.id) {
         user = bot.user;
         user1 = message.author;
     }
-        message.channel.send("Загрузка.").then(msg => {
+        message.channel.send(`${bot.emojis.get(emojis.loading)}`).then(msg => {
         request('https://nekos.life/api/v2/img/kiss', function (error, response, body) {
             try {
                 let arr = JSON.parse(body);
@@ -210,14 +210,14 @@ if (message.content.startsWith(`${prefix}kiss`)) {
 }
 
 if (message.content.startsWith(`${prefix}pat`)) {
-    if(!args[0]) return message.channel.send('```s!pat @user\n\nПогладить пользователя.```');
+    if(!args[0]) return message.channel.send('```k!pat @user\n\nПогладить пользователя.```');
     let user = message.author;
     let user1 = message.mentions.users.first();
     if (!user1 || user1.id === user.id) {
         user = bot.user;
         user1 = message.author;
     }
-        message.channel.send("Загрузка.").then(msg => {        
+        message.channel.send(`${bot.emojis.get(emojis.loading)}`).then(msg => {        
         request('https://nekos.life/api/v2/img/pat', function (error, response, body) {
             try {
                 let arr = JSON.parse(body);
@@ -227,7 +227,7 @@ if (message.content.startsWith(`${prefix}pat`)) {
                     .setFooter('►СВЕРХКОНФА | s!pat @user', 'https://cdn.discordapp.com/attachments/407984018118672385/490605668274012186/FunDZNs_4.png')
                     .setColor("#007fff")
                     .setTimestamp(); 
-                    msg.edit({embed});  
+                    msg.edit({embed});     
             } catch (e) {
                 console.log(e)
             }
@@ -236,14 +236,14 @@ if (message.content.startsWith(`${prefix}pat`)) {
 }
 
 if (message.content.startsWith(`${prefix}hug`)) {
-    if(!args[0]) return message.channel.send('```s!hug @user\n\nОбнять пользователя.```');
+    if(!args[0]) return message.channel.send('```k!hug @user\n\nОбнять пользователя.```');
     let user = message.author;
     let user1 = message.mentions.users.first();
     if (!user1 || user1.id === user.id) {
         user = bot.user;
         user1 = message.author;
     }
-        message.channel.send("Загрузка.").then(msg => {
+        message.channel.send(`${bot.emojis.get(emojis.loading)}`).then(msg => {
         request('https://nekos.life/api/v2/img/hug', function (error, response, body) {
             try {
                 let arr = JSON.parse(body);
@@ -262,14 +262,14 @@ if (message.content.startsWith(`${prefix}hug`)) {
 }
 
 if (message.content.startsWith(`${prefix}nom`)) {
-    if(!args[0]) return message.channel.send('```s!nom @user\n\nДать покушать пользователю```');
+    if(!args[0]) return message.channel.send('```k!nom @user\n\nДать покушать пользователю```');
     let user = message.author;
     let user1 = message.mentions.users.first();
     if (!user1 || user1.id === user.id) {
         user = bot.user;
         user1 = message.author;
     }
-        message.channel.send("Загрузка.").then(msg => {
+        message.channel.send(`${bot.emojis.get(emojis.loading)}`).then(msg => {
         request('https://nekos.life/api/v2/img/feed', function (error, response, body) {
             try {
                 let arr = JSON.parse(body);
@@ -288,14 +288,14 @@ if (message.content.startsWith(`${prefix}nom`)) {
 }
 
 if (message.content.startsWith(`${prefix}poke`)) {
-    if(!args[0]) return message.channel.send('```s!poke @user\n\nТыкнуть пользователя.```');
+    if(!args[0]) return message.channel.send('```k!poke @user\n\nТыкнуть пользователя.```');
     let user = message.author;
     let user1 = message.mentions.users.first();
     if (!user1 || user1.id === user.id) {
         user = bot.user;
         user1 = message.author;
     }
-        message.channel.send("Загрузка.").then(msg => {
+        message.channel.send(`${bot.emojis.get(emojis.loading)}`).then(msg => {
         request('https://nekos.life/api/v2/img/poke', function (error, response, body) {
             try {
                 let arr = JSON.parse(body);
