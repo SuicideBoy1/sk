@@ -4,8 +4,8 @@ const bot = new Discord.Client();
 const emojis = {
     yes:'483325848749998080', 
     no:'483325856748666890',
-    loading:'12367768',
-    gaypride:'1235'
+    loading:'503593978558677004',
+    gaypride:'503593932224069632'
 };
 
 const prefix = "s!";
