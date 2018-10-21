@@ -4,6 +4,8 @@ const bot = new Discord.Client();
 const emojis = {
     yes:'483325848749998080', 
     no:'483325856748666890',
+    loading:'12367768',
+    gaypride:'1235'
 };
 
 const prefix = "s!";
@@ -40,6 +42,29 @@ const embedsayMessage = args.join(" ");
 if (message.channel.id == '480879077600002049') {
     message.react('483325848749998080') 
     message.react('483325856748666890');
+}
+
+if(command === "smile" && ['248521740945195008'].includes(message.author.id)){
+    message.channel.send(bot.emojis.find("name", args[0]).id)
+    }
+
+if (message.content.startsWith(`${prefix}gay`)){
+   message.delete();
+   
+   let member = message.mentions.members.first();
+   if(!member) member = message.member;
+
+   let replies = [`${member} на 0% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 1% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 2% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 3% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 4% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 5% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 6% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 7% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 8% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 9% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 10% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 11% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 12% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 13% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 14% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 15% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 16% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 17% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 18% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 19% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 20% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 21% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 22% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 23% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 24% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 25% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 26% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 27% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 28% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 29% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 30% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 31% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 32% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 33% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 34% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 35% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 36% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 37% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 38% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 39% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 40% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 41% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 42% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 43% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 44% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 45% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 46% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 47% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 48% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 49% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 50% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 51% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 52% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 53% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 54% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 55% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 56% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 57% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 58% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 59% гей ${bot.emojis.get(emojis.gaypride)}`,`${member} на 60% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 61% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 62% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 63% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 64% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 65% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 65% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 66% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 67% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 68% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 69% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 70% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 71% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 72% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 73% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 74% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 75% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 76% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 77% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 78% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 79% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 80% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 81% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 82% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 83% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 84% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 85% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 86% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 87% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 88% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 89% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 90% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 91% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 92% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 93% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 94% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 95% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 96% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 97% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 98% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 99% гей ${bot.emojis.get(emojis.gaypride)}`, `${member} на 100% гей ${bot.emojis.get(emojis.gaypride)}`];
+   let result = Math.floor((Math.random() * replies.length));
+   let question = args.join(" "); 
+
+   let gayembed = new Discord.RichEmbed()
+
+   .setColor('RANDOM')
+   .addField("Gay-Meter228", replies[result])
+   .setFooter('►СВЕРХКОНФА | s!gay @user', 'https://cdn.discordapp.com/attachments/407984018118672385/490605668274012186/FunDZNs_4.png')
+   .setTimestamp(); 
+   return message.channel.send(gayembed)
 }
 
 if (message.content.startsWith(`${prefix}ship`)) {
