@@ -209,7 +209,7 @@ if (message.content.startsWith(`${prefix}slap`)) {
 }
 
 if (message.content.startsWith(`${prefix}kiss`)) {
-    if(!args[0]) return message.channel.send('```k!kiss @user\n\nПоцеловать пользователя.```');
+    if(!args[0]) return message.channel.send('```s!kiss @user\n\nПоцеловать пользователя.```');
     let user = message.author;
     let user1 = message.mentions.users.first();
     if (!user1 || user1.id === user.id) {
@@ -235,7 +235,7 @@ if (message.content.startsWith(`${prefix}kiss`)) {
 }
 
 if (message.content.startsWith(`${prefix}pat`)) {
-    if(!args[0]) return message.channel.send('```k!pat @user\n\nПогладить пользователя.```');
+    if(!args[0]) return message.channel.send('```s!pat @user\n\nПогладить пользователя.```');
     let user = message.author;
     let user1 = message.mentions.users.first();
     if (!user1 || user1.id === user.id) {
@@ -261,7 +261,7 @@ if (message.content.startsWith(`${prefix}pat`)) {
 }
 
 if (message.content.startsWith(`${prefix}hug`)) {
-    if(!args[0]) return message.channel.send('```k!hug @user\n\nОбнять пользователя.```');
+    if(!args[0]) return message.channel.send('```s!hug @user\n\nОбнять пользователя.```');
     let user = message.author;
     let user1 = message.mentions.users.first();
     if (!user1 || user1.id === user.id) {
@@ -287,7 +287,7 @@ if (message.content.startsWith(`${prefix}hug`)) {
 }
 
 if (message.content.startsWith(`${prefix}nom`)) {
-    if(!args[0]) return message.channel.send('```k!nom @user\n\nДать покушать пользователю```');
+    if(!args[0]) return message.channel.send('```s!nom @user\n\nДать покушать пользователю```');
     let user = message.author;
     let user1 = message.mentions.users.first();
     if (!user1 || user1.id === user.id) {
@@ -313,7 +313,7 @@ if (message.content.startsWith(`${prefix}nom`)) {
 }
 
 if (message.content.startsWith(`${prefix}poke`)) {
-    if(!args[0]) return message.channel.send('```k!poke @user\n\nТыкнуть пользователя.```');
+    if(!args[0]) return message.channel.send('```s!poke @user\n\nТыкнуть пользователя.```');
     let user = message.author;
     let user1 = message.mentions.users.first();
     if (!user1 || user1.id === user.id) {
@@ -339,7 +339,7 @@ if (message.content.startsWith(`${prefix}poke`)) {
 }
 
 if (message.content.startsWith(`${prefix}suicide`)) {
-        message.channel.send("Загрузка.").then(msg => {
+        message.channel.send(`${bot.emojis.get(emojis.loading)}`).then(msg => {
         const urls = ['https://cdn60.picsart.com/182542841000202.gif?r1024x1024', 'https://images-ext-2.discordapp.net/external/PVHDexd-zGtZwfUY_ivDzIR7bDaHDygKZ8XmR9jUOd8/https/i.imgur.com/cp9ZF1A.gif?width=360&height=203', 'https://i.pinimg.com/originals/a5/f1/96/a5f196464ed42f493b95a600099e83b9.gif', 'https://media.giphy.com/media/WsWJZcJoxmLUk/giphy.gif', 'https://media1.tenor.com/images/47892bb88afc132a3afb775988208240/tenor.gif?itemid=5505166', 'https://data.whicdn.com/images/290510883/original.gif', 'https://78.media.tumblr.com/6824d7afa9302623f7d9956ccb68778d/tumblr_mp7y69GFbW1s9t463o1_500.gif', 'https://media1.tenor.com/images/a5db1c26b710b8b834d8265bf97a6c79/tenor.gif?itemid=5091706', 'http://data.whicdn.com/images/107593752/large.gif', 'https://i.pinimg.com/originals/03/43/e6/0343e651eded6629041d165f9c0d7cf7.gif', 'https://zippy.gfycat.com/EquatorialGleefulArabianhorse.gif', 'https://i.imgur.com/ysphsEK.gif', 'https://i.imgur.com/WSioKga.gif', 'https://i.imgur.com/4Bw9XTs.gif', 'https://i.imgur.com/Q0H6LO2.gif'];
                         let user1 = message.author;
                         let embed = new Discord.RichEmbed()
@@ -359,7 +359,7 @@ if (message.content.startsWith(`${prefix}suicide`)) {
             user = bot.user;
             user1 = message.author;
         }
-            message.channel.send("Загрузка.").then(msg => {
+            message.channel.send(`${bot.emojis.get(emojis.loading)}`).then(msg => {
                 const urls = ['http://gifimage.net/wp-content/uploads/2017/09/anime-kill-gif.gif', 'https://cdn.discordapp.com/attachments/438289167525347328/471199251230228510/3.gif', 'https://cdn.discordapp.com/attachments/438280799448727552/471207587254108161/1.gif', 'https://cdn.weeb.sh/images/B1qosktwb.gif', 'https://cdn.weeb.sh/images/B1VnoJFDZ.gif', 'https://cdn.discordapp.com/attachments/438280799448727552/471279823537569794/2.gif', 'https://cdn.discordapp.com/attachments/438280799448727552/471280185996476426/1.gif', 'https://cdn.discordapp.com/attachments/438289167525347328/471280517560664066/3.gif', 'https://cdn.discordapp.com/attachments/438289167525347328/471280729175883796/1.gif'];
                     let embed = new Discord.RichEmbed()
                         .setDescription(`${user} Убил(а) ${user1}.`)
@@ -371,7 +371,7 @@ if (message.content.startsWith(`${prefix}suicide`)) {
             });
         }
         if (message.content.startsWith(`${prefix}sad`)) {
-                message.channel.send("Загрузка.").then(msg => {
+                message.channel.send(`${bot.emojis.get(emojis.loading)}`).then(msg => {
                 const urls = ['https://media2.giphy.com/media/ROF8OQvDmxytW/giphy.gif', 'https://cdn.weeb.sh/images/HyO7mIXvW.gif','https://i.pinimg.com/originals/ce/cd/c0/cecdc0584e01e1fc3cd9dd9f36adfaa9.gif', 'https://i.skyrock.net/3403/91613403/pics/3227155489_1_2_1EU0NjzW.gif', 'http://gif-finder.com/wp-content/uploads/2015/07/Anime-girl-crying.gif', 'https://i.pinimg.com/originals/19/42/07/194207dd9df329dcc66bf0bc07eefe8c.gif', 'https://i.gifer.com/HNHc.gif', 'http://mrwgifs.com/wp-content/uploads/2013/05/Dramatic-Crying-In-Anime-Gif.gif', 'https://i.imgur.com/5qw84ue.gif', 'https://data.whicdn.com/images/307228077/original.gif', 'http://gifimage.net/wp-content/uploads/2017/07/anime-cry-gif-9.gif', 'https://media1.tenor.com/images/d5668af606ca4d0332a6507418cabbce/tenor.gif?itemid=4952249', 'https://media.giphy.com/media/3fmRTfVIKMRiM/giphy.gif', 'https://media1.tenor.com/images/75edc9882e5175f86c2af777ffbb14a6/tenor.gif?itemid=5755232', 'http://gifimage.net/wp-content/uploads/2017/07/anime-cry-gif-28.gif'];
                                 let user1 = message.author;
                                 let embed = new Discord.RichEmbed()
@@ -384,7 +384,7 @@ if (message.content.startsWith(`${prefix}suicide`)) {
                         });
                     }
             if (message.content.startsWith(`${prefix}happy`)) {
-                    message.channel.send("Загрузка.").then(msg => {
+                    message.channel.send(`${bot.emojis.get(emojis.loading)}`).then(msg => {
                     const urls = ['https://media.giphy.com/media/3Cm8cxtSHqu6Q/giphy.gif', 'https://thumbs.gfycat.com/BrilliantScaryAmethystsunbird-max-14mb.gif','https://cdn72.picsart.com/186168594000202.gif?r1024x1024', 'https://gifimage.net/wp-content/uploads/2017/10/happy-anime-girl-gif-4.gif', 'https://i.gifer.com/FPU2.gif', 'https://data.whicdn.com/images/174338297/original.gif', 'https://data.whicdn.com/images/220182469/original.gif', 'https://media.giphy.com/media/MgJAxaf1mjn56/giphy.gif', 'https://i.kym-cdn.com/photos/images/original/001/154/308/a68.gif', 'https://media2.giphy.com/media/CNUb51EbTxuRG/giphy.gif'];
                                     let user1 = message.author;
                                     let embed = new Discord.RichEmbed()
@@ -418,7 +418,7 @@ if (message.content.startsWith(`${prefix}suicide`)) {
             user = bot.user;
             user1 = message.author;
         }
-            message.channel.send("Загрузка.").then(msg => {
+            message.channel.send(`${bot.emojis.get(emojis.loading)}`).then(msg => {
                 const urls = ['https://static.hentai-gifs.com/upload/20160506/14/27150/1.gif', 'https://cdn.discordapp.com/attachments/428290347534123008/477554893205536778/85b54d01ce6898f555e0a66eb54a01ab.gif','https://cdn.discordapp.com/attachments/428290347534123008/477555514994196481/6981fee72bcd6f3898ddef378bc84.gif', 'https://static.hentai-gifs.com/upload/20160426/3/5738/detail.gif', 'https://static.hentai-gifs.com/upload/20160425/1/1891/detail.gif', 'https://static.hentai-gifs.com/upload/20160426/3/5820/detail.gif', 'http://tbib.org/images/3077/00dd247aa2ab8d2a5e1682f53e3c9dc328f050b5.gif?3590962', 'https://static.hentai-gifs.com/upload/20160425/2/4030/detail.gif', 'https://hentaiporns.net/wp-content/uploads/2018/03/6023902-cfab3f8759c233b08842149edcf835b9.gif ', 'http://tbib.org/images/1053/ae959f49535790a81368572d25292bde0aca8fc4.gif?1052103'];
                     let embed = new Discord.RichEmbed()
                         .setDescription(`${user} занялся сексом с ${user1}.`)
