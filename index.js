@@ -5,7 +5,8 @@ const emojis = {
     yes:'483325848749998080', 
     no:'483325856748666890',
     loading:'503593978558677004',
-    gaypride:'503593932224069632'
+    gaypride:'503593932224069632',
+    eightball:'503618598296616970'
 };
 
 const prefix = "s!";
@@ -359,6 +360,27 @@ if (message.content.startsWith(`${prefix}suicide`)) {
             });
         }
 //------------------------------------------------------------
+if (message.content.startsWith(`${prefix}8ball`)) {
+
+    if(!args[1]) return message.channel.send("Введите вопрос. `k!8ball <вопрос>`");
+    let replies = [`${bot.emojis.get(emojis.ball)} Да`, `${bot.emojis.get(emojis.ball)} Нет`, `${bot.emojis.get(emojis.ball)} Я не знаю`, `${bot.emojis.get(emojis.ball)} Спроси ещё раз.`, `${bot.emojis.get(emojis.ball)} Ммм.Хз`, `${bot.emojis.get(emojis.ball)} Я не уверен...`, `${bot.emojis.get(emojis.ball)} Пожалyй нет.`, `${bot.emojis.get(emojis.ball)} Вы мне говориле это.`, `${bot.emojis.get(emojis.ball)} Пожалуй да.`];
+
+    let result = Math.floor((Math.random() * replies.length));
+    let question = args.join(" ");
+    
+    let user = message.mentions.members.first();
+    if (!user) user = message.author;
+    let ballembed = new Discord.RichEmbed()
+
+    .setColor('RANDOM')
+    .addField("❔ Вопрос:", question)
+    .addField("❗ Ответ:", replies[result])
+    .setFooter('►СВЕРХКОНФА | s!8ball', 'https://cdn.discordapp.com/attachments/407984018118672385/490605668274012186/FunDZNs_4.png')
+    .setTimestamp(); 
+    return message.channel.send(ballembed)
+  }
+
+//---------------------------------------------------------
 
 });
 
