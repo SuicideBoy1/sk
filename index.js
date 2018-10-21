@@ -243,7 +243,7 @@ if (message.content.startsWith(`${prefix}kiss`)) {
                     .setFooter('►СВЕРХКОНФА | s!kiss @user', 'https://cdn.discordapp.com/attachments/407984018118672385/490605668274012186/FunDZNs_4.png')
                     .setColor("#007fff")
                     .setTimestamp(); 
-                    msg.edit({embed});  
+                    msg.edit({embed});   
             } catch (e) {
                 console.log(e)
             }
