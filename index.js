@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const getImageColors = require('get-image-colors');
 const fs = require("fs");
 const bot = new Discord.Client();
 const emojis = {
@@ -38,6 +39,22 @@ const embedsayMessage = args.join(" ");
         message.delete().catch(O_o => {});
   }
 
+ if (message.content.startsWith(`${prefix}avatar`)) {
+        message.delete();
+        let user = message.mentions.users.first();
+        if (!user) user = message.author;
+        getImageColors(user.avatarURL).then(color => {
+            let c = color.map(col => col.hex());
+        let embed = new Discord.RichEmbed()
+            .setAuthor(user.username,user.avatarURL)
+            .setDescription(`Аватарка ${user}`)
+            .setTimestamp()
+            .setColor(c[0])
+            .setImage(user.avatarURL)
+            .setFooter('►СВЕРХКОНФА | s!avatar @user', 'https://cdn.discordapp.com/attachments/407984018118672385/490605668274012186/FunDZNs_4.png');
+        message.channel.send({embed});
+    } )
+  }
 
 if (message.channel.id == '480879077600002049') {
     message.react('483325848749998080') 
