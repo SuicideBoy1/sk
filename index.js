@@ -363,7 +363,7 @@ if (message.content.startsWith(`${prefix}suicide`)) {
 if (message.content.startsWith(`${prefix}8ball`)) {
 
     if(!args[1]) return message.channel.send("Введите вопрос. `k!8ball <вопрос>`");
-    let replies = [`${bot.emojis.get(emojis.ball)} Да`, `${bot.emojis.get(emojis.ball)} Нет`, `${bot.emojis.get(emojis.ball)} Я не знаю`, `${bot.emojis.get(emojis.ball)} Спроси ещё раз.`, `${bot.emojis.get(emojis.ball)} Ммм.Хз`, `${bot.emojis.get(emojis.ball)} Я не уверен...`, `${bot.emojis.get(emojis.ball)} Пожалyй нет.`, `${bot.emojis.get(emojis.ball)} Вы мне говориле это.`, `${bot.emojis.get(emojis.ball)} Пожалуй да.`];
+    let replies = [`${bot.emojis.get(emojis.eightball)} Да`, `${bot.emojis.get(emojis.eightball)} Нет`, `${bot.emojis.get(emojis.eightball)} Я не знаю`, `${bot.emojis.get(emojis.eightball)} Спроси ещё раз.`, `${bot.emojis.get(emojis.eightball)} Ммм.Хз`, `${bot.emojis.get(emojis.eightball)} Я не уверен...`, `${bot.emojis.get(emojis.eightball)} Пожалyй нет.`, `${bot.emojis.get(emojis.eightball)} Ты мне говориле это.-.-`, `${bot.emojis.get(emojis.eightball)} Пожалуй да.`];
 
     let result = Math.floor((Math.random() * replies.length));
     let question = args.join(" ");
