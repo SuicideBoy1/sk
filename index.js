@@ -395,7 +395,7 @@ async function color () {
         })
     }, 1500).then(color);
 }
-client.on('ready', () => {
+bot.on('ready', () => {
     color();
    });
 
