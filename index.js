@@ -1,7 +1,6 @@
 const Discord = require('discord.js');
 const fs = require("fs");
 const forEachTimeout = require('foreach-timeout');
-const getImageColors = require('get-image-colors');
 const bot = new Discord.Client();
 const emojis = {
     yes:'483325848749998080', 
@@ -418,13 +417,11 @@ if (message.content.startsWith("бот не писать")) {
         message.delete();
         let user = message.mentions.users.first();
         if (!user) user = message.author;
-        getImageColors(user.avatarURL).then(color => {
-            let c = color.map(col => col.hex());
         let embed = new Discord.RichEmbed()
             .setAuthor(user.username,user.avatarURL)
             .setDescription(`Аватарка ${user}`)
             .setTimestamp()
-            .setColor(c[0])
+            .setColor("007fff")
             .setImage(user.avatarURL)
             .setFooter('►СВЕРХКОНФА | s!avatar', 'https://cdn.discordapp.com/attachments/407984018118672385/490605668274012186/FunDZNs_4.png')
             .setTimestamp(); 
@@ -442,7 +439,7 @@ if (message.content.startsWith(`${prefix}help`)){
     
     let helpEmbed = new Discord.RichEmbed()
     .setTitle("**КОМАНДЫ БОТА**")
-    .setColor('RANDOM')
+    .setColor('007fff')
 	.addField("Украсть аву:", "`s!avatar <Пользователь>`")
     .addField("Эмоции:", "`s!kiss <Пользователь>;`\n`s!slap <Пользователь>;`\n`s!poke <Пользователь>;`\n`s!pat <Пользователь>;`\n`s!hug <Пользователь>;`\n`s!kill <Пользователь>;`\n`+sex <Пользователь>;`\n`s!suicide;`\n`s!sad;`\n`s!happy;`\n`k!happy;`\n`s!smoke.`")
     .addField("Гей-Мастер228:", "`s!gay <Пользователь>`")
