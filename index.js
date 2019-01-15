@@ -401,7 +401,7 @@ if (message.content.startsWith(`${prefix}8ball`)) {
         if (message.content === 's!stop') {stop.push(message.guild.id); return message.channel.send('Готово');}
         if (message.content === 's!start') {stop.splice(stop.indexOf(message.guild.id),1); return message.channel.send('Готово');}
 
-     });
-})
+     }
+});
 
 bot.login(process.env.BOT_TOKEN);
