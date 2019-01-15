@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const fs = require("fs");
 const forEachTimeout = require('foreach-timeout');
+const getImageColors = require('get-image-colors');
 const bot = new Discord.Client();
 const emojis = {
     yes:'483325848749998080', 
@@ -26,6 +27,7 @@ async function color () {
 }
 bot.on('ready', () => {
     color();
+    bot.user.setPresence({ game: { name: `в очко Мадера`, type: 3 } }).catch();
 });
 
 bot.on('message', (message) => {
@@ -400,6 +402,58 @@ if (message.content.startsWith(`${prefix}8ball`)) {
     if (message.member.hasPermission('MANAGE_GUILD') || message.member.hasPermission('ADMINISTRATOR') || message.member.id === message.guild.owner.id) {
         if (message.content === 's!stop') {stop.push(message.guild.id); return message.channel.send('Готово');}
         if (message.content === 's!start') {stop.splice(stop.indexOf(message.guild.id),1); return message.channel.send('Готово');}
+//---------------------------------------------------------
+if (message.content.startsWith("бот писать")){
+    message.delete();
+    //Отвечает за то чтобы бот начал писать в вызваном чате.
+    message.channel.startTyping();
+}
+if (message.content.startsWith("бот не писать")) {
+    message.delete();
+    //Отвечает за то чтобы бот перестал писать в вызваном чате.
+    message.channel.stopTyping();
+}
+//----------------------------------------------------------
+    if (message.content.startsWith(`${prefix}avatar`)) {
+        message.delete();
+        let user = message.mentions.users.first();
+        if (!user) user = message.author;
+        getImageColors(user.avatarURL).then(color => {
+            let c = color.map(col => col.hex());
+        let embed = new Discord.RichEmbed()
+            .setAuthor(user.username,user.avatarURL)
+            .setDescription(`Аватарка ${user}`)
+            .setTimestamp()
+            .setColor(c[0])
+            .setImage(user.avatarURL)
+            .setFooter('►СВЕРХКОНФА | s!avatar', 'https://cdn.discordapp.com/attachments/407984018118672385/490605668274012186/FunDZNs_4.png')
+            .setTimestamp(); 
+        message.channel.send({embed});
+    } )
+  }
+//----------------------------------------------------------
+if (message.content.startsWith(`${prefix}help`)){
+
+    message.delete();
+
+    user1 = message.author;
+
+    message.channel.send(`${user1} Посмотри личное сообщение!`).then(msg => {
+    
+    let helpEmbed = new Discord.RichEmbed()
+    .setTitle("**КОМАНДЫ БОТА**")
+    .setColor('RANDOM')
+	.addField("Украсть аву:", "`s!avatar <Пользователь>`")
+    .addField("Эмоции:", "`s!kiss <Пользователь>;`\n`s!slap <Пользователь>;`\n`s!poke <Пользователь>;`\n`s!pat <Пользователь>;`\n`s!hug <Пользователь>;`\n`s!kill <Пользователь>;`\n`+sex <Пользователь>;`\n`s!suicide;`\n`s!sad;`\n`s!happy;`\n`k!happy;`\n`s!smoke.`")
+    .addField("Гей-Мастер228:", "`s!gay <Пользователь>`")
+    .addField("8Ball:", "`s!8ball <Вопрос>`")
+    .addField("Измеритель-Совместимости:", "`s!ship <Пользователь>`")
+   .setFooter('►СВЕРХКОНФА | s!help', 'https://cdn.discordapp.com/attachments/407984018118672385/490605668274012186/FunDZNs_4.png')
+   .setTimestamp(); 
+    return message.author.send(helpEmbed)
+      })
+    }
+//-----------------------------------------------------
 
      }
 });
