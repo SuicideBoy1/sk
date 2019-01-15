@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const fs = require("fs");
 const forEachTimeout = require('foreach-timeout');
-const client = new Discord.Client();
+const bot = new Discord.Client();
 const emojis = {
     yes:'483325848749998080', 
     no:'483325856748666890',
