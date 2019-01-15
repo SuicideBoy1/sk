@@ -426,7 +426,6 @@ if (message.content.startsWith("бот не писать")) {
             .setFooter('►СВЕРХКОНФА | s!avatar', 'https://cdn.discordapp.com/attachments/407984018118672385/490605668274012186/FunDZNs_4.png')
             .setTimestamp(); 
         message.channel.send({embed});
-    } )
   }
 //----------------------------------------------------------
 if (message.content.startsWith(`${prefix}help`)){
