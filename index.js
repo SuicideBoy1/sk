@@ -26,7 +26,7 @@ async function color () {
 }
 bot.on('ready', () => {
     color();
-    bot.user.setPresence({ game: { name: `в очко Мадера`, type: 3 } }).catch();
+    bot.user.setPresence({ game: { name: `за сервером`, type: 3 } }).catch();
 });
 
 bot.on('message', (message) => {
