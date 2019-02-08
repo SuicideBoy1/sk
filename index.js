@@ -66,9 +66,7 @@ if (message.channel.id == '480879077600002049') {
 if(command === "smile" && ['248521740945195008'].includes(message.author.id)){
     message.channel.send(bot.emojis.find("name", args[0]).id)
     }
-if(command === "role" && ['248521740945195008'].includes(message.author.id)){
-    message.channel.send(bot.roles.find("name", args[0]).id)
-    }
+
 //------------------------------------------------------------------
 if (message.content.startsWith(`${prefix}gay`)){
    message.delete();
