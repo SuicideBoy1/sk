@@ -29,7 +29,29 @@ bot.on('ready', () => {
     bot.user.setPresence({ game: { name: `за сервером`, type: 3 } }).catch();
 });
 
-
+bot.on('messageReactionAdd', (reaction, user) => {
+    if (!('message' in reaction && 'id' && reaction.message) || reaction.message.id !== '541216302640136202') return;
+    let emojis = {
+        'RocketLeague': '428481013715304448',
+        'TabletopSimulator': '428481130707156992',
+		'CSGO': '428481199183364108',
+		'Rust': '428481238018555906',
+		'Minecraft': '428481261548601344',
+		'Osu': '428481283128295424',
+		'Dota2': '428481309065609218',
+		'GarrysMod': '428481362165628928',
+		'DuckGame': '428481406600085515',
+		'Overwatch': '428481459716620288',
+		'PUBG': '428481565702488075',
+		'Fortnite': '428481635021881344',
+		'GrandTheftAutoV': '428481686268018697',
+		'Hearthstone': '428481713157701633',
+		'LeagueofLegends': '428481785551126528',
+		'RainbowSixSiege': '428481805792968715'
+    };
+    if (!emojis.includes(reaction.emoji.name)) return;
+    reaction.message.guild.members.get(user.id).addRole(emojis[reaction.emoji.name]);
+});
 
 bot.on('message', (message) => {
 
