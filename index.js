@@ -23,28 +23,90 @@ bot.on('ready', () => {
 });
 
 bot.on('messageReactionAdd', (reaction, user) => {
-    if (!('message' in reaction && 'id' && reaction.message) || reaction.message.id !== '541216302640136202') return;
-    let emojis = {
-        'RocketLeague': '428481013715304448',
-        'TabletopSimulator': '428481130707156992',
-		'CSGO': '428481199183364108',
-		'Rust': '428481238018555906',
-		'Minecraft': '428481261548601344',
-		'Osu': '428481283128295424',
-		'Dota2': '428481309065609218',
-		'GarrysMod': '428481362165628928',
-		'DuckGame': '428481406600085515',
-		'Overwatch': '428481459716620288',
-		'PUBG': '428481565702488075',
-		'Fortnite': '428481635021881344',
-		'GrandTheftAutoV': '428481686268018697',
-		'Hearthstone': '428481713157701633',
-		'LeagueofLegends': '428481785551126528',
-		'RainbowSixSiege': '428481805792968715'
-    };
-    if (!emojis.includes(reaction.emoji.name)) return;
-    reaction.message.guild.members.get(user.id).addRole(emojis[reaction.emoji.name]);
-});
+bot.emojis.get('503586881083146260');
+bot.channels.get ('428471923970670592').fetchMessage ('541216302640136202');
+if (reaction.message.id !== '541216302640136202')
+  return ;
+  reaction.remove (user);
+if (reaction.emoji.name === 'RocketLeague'){
+  const member = reaction.message.guild.members.get (user.id);
+  member.addRole ('428481013715304448').catch();
+}
+if (reaction.emoji.name === 'TabletopSimulator'){
+  const member = reaction.message.guild.members.get (user.id);
+  member.addRole ('428481130707156992').catch();
+}
+
+if (reaction.emoji.name === 'CSGO'){
+  const member = reaction.message.guild.members.get (user.id);
+  member.addRole ('428481199183364108').catch();
+}
+
+if (reaction.emoji.name === 'Rust'){
+  const member = reaction.message.guild.members.get (user.id);
+  member.addRole ('428481238018555906').catch();
+}
+
+if (reaction.emoji.name === 'Minecraft'){
+  const member = reaction.message.guild.members.get (user.id);
+  member.addRole ('428481261548601344').catch();
+}
+
+if (reaction.emoji.name === 'Osu'){
+  const member = reaction.message.guild.members.get (user.id);
+  member.addRole ('428481283128295424').catch();
+}
+
+if (reaction.emoji.name === 'Dota2'){
+  const member = reaction.message.guild.members.get (user.id);
+  member.addRole ('428481309065609218').catch();
+}
+
+if (reaction.emoji.name === 'GarrysMod'){
+  const member = reaction.message.guild.members.get (user.id);
+  member.addRole ('428481362165628928').catch();
+}
+
+if (reaction.emoji.name === 'DuckGame'){
+  const member = reaction.message.guild.members.get (user.id);
+  member.addRole ('428481406600085515').catch();
+}
+
+if (reaction.emoji.name === 'Overwatch'){
+  const member = reaction.message.guild.members.get (user.id);
+  member.addRole ('428481459716620288').catch();
+}
+
+if (reaction.emoji.name === 'PUBG'){
+  const member = reaction.message.guild.members.get (user.id);
+  member.addRole ('428481565702488075').catch();
+}
+
+if (reaction.emoji.name === 'Fortnite'){
+  const member = reaction.message.guild.members.get (user.id);
+  member.addRole ('428481635021881344').catch();
+}
+
+if (reaction.emoji.name === 'GrandTheftAutoV'){
+  const member = reaction.message.guild.members.get (user.id);
+  member.addRole ('428481686268018697').catch();
+}
+
+if (reaction.emoji.name === 'Hearthstone'){
+  const member = reaction.message.guild.members.get (user.id);
+  member.addRole ('428481713157701633').catch();
+}
+
+if (reaction.emoji.name === 'LeagueofLegends'){
+  const member = reaction.message.guild.members.get (user.id);
+  member.addRole ('428481785551126528').catch();
+}
+
+if (reaction.emoji.name === 'RainbowSixSiege'){
+  const member = reaction.message.guild.members.get (user.id);
+  member.addRole ('428481805792968715').catch();
+}
+  }  )
 
 bot.on('message', (message) => {
 
@@ -71,6 +133,17 @@ const embedsayMessage = args.join(" ");
         message.delete().catch(O_o => {});
   }
 //------------------------------------------------------------------
+ if (command === 'eval' && message.author.id === `248521740945195008`) {
+        message.delete();
+        try {
+                  let code = args.join(" ");
+                  let evaled = eval(code);
+      
+                  if (typeof evaled !== "string")
+                      evaled = util.inspect(evaled);
+              } catch (err) {
+              }
+      }
 //------------------------------------------------------------------
 //------------------------------------------------------------------
 if(command === "smile" && ['248521740945195008'].includes(message.author.id)){
