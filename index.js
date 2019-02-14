@@ -46,81 +46,81 @@ bot.channels.get ('428471923970670592').fetchMessage ('541216302640136202');
 if (reaction.message.id !== '541216302640136202')
   return ;
   reaction.remove (user);
-if (reaction.emoji.name === 'RocketLeague'){
+if (reaction.emoji.name === '503584722228871169'){
   const member = reaction.message.guild.members.get (user.id);
   member.addRole ('428481013715304448').catch();
 }
-if (reaction.emoji.name === 'TabletopSimulator'){
+if (reaction.emoji.name === '544117221711151107'){
   const member = reaction.message.guild.members.get (user.id);
   member.addRole ('428481130707156992').catch();
 }
 
-if (reaction.emoji.name === 'CSGO'){
+if (reaction.emoji.name === '503582039409426442'){
   const member = reaction.message.guild.members.get (user.id);
   member.addRole ('428481199183364108').catch();
 }
 
-if (reaction.emoji.name === 'Rust'){
+if (reaction.emoji.name === '503582221689683988'){
   const member = reaction.message.guild.members.get (user.id);
   member.addRole ('428481238018555906').catch();
 }
 
-if (reaction.emoji.name === 'Minecraft'){
+if (reaction.emoji.name === '503582018391506954'){
   const member = reaction.message.guild.members.get (user.id);
   member.addRole ('428481261548601344').catch();
 }
 
-if (reaction.emoji.name === 'Osu'){
+if (reaction.emoji.name === '503586881083146260'){
   const member = reaction.message.guild.members.get (user.id);
   member.addRole ('428481283128295424').catch();
 }
 
-if (reaction.emoji.name === 'Dota2'){
+if (reaction.emoji.name === '503582030966292520'){
   const member = reaction.message.guild.members.get (user.id);
   member.addRole ('428481309065609218').catch();
 }
 
-if (reaction.emoji.name === 'GarrysMod'){
+if (reaction.emoji.name === '503582137811730463'){
   const member = reaction.message.guild.members.get (user.id);
   member.addRole ('428481362165628928').catch();
 }
 
-if (reaction.emoji.name === 'DuckGame'){
+if (reaction.emoji.name === '503582123664605195'){
   const member = reaction.message.guild.members.get (user.id);
   member.addRole ('428481406600085515').catch();
 }
 
-if (reaction.emoji.name === 'Overwatch'){
+if (reaction.emoji.name === '503584922028474378'){
   const member = reaction.message.guild.members.get (user.id);
   member.addRole ('428481459716620288').catch();
 }
 
-if (reaction.emoji.name === 'PUBG'){
+if (reaction.emoji.name === '503582093532725270'){
   const member = reaction.message.guild.members.get (user.id);
   member.addRole ('428481565702488075').catch();
 }
 
-if (reaction.emoji.name === 'Fortnite'){
+if (reaction.emoji.name === '503582211472228352'){
   const member = reaction.message.guild.members.get (user.id);
   member.addRole ('428481635021881344').catch();
 }
 
-if (reaction.emoji.name === 'GrandTheftAutoV'){
+if (reaction.emoji.name === '503585408307691521'){
   const member = reaction.message.guild.members.get (user.id);
   member.addRole ('428481686268018697').catch();
 }
 
-if (reaction.emoji.name === 'Hearthstone'){
+if (reaction.emoji.name === '503586686513577994'){
   const member = reaction.message.guild.members.get (user.id);
   member.addRole ('428481713157701633').catch();
 }
 
-if (reaction.emoji.name === 'LeagueofLegends'){
+if (reaction.emoji.name === '503582165574090762'){
   const member = reaction.message.guild.members.get (user.id);
   member.addRole ('428481785551126528').catch();
 }
 
-if (reaction.emoji.name === 'RainbowSixSiege'){
+if (reaction.emoji.name === '503582194971836434'){
   const member = reaction.message.guild.members.get (user.id);
   member.addRole ('428481805792968715').catch();
 }
