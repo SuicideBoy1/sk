@@ -534,11 +534,7 @@ if (message.content.startsWith("бот не писать")) {
 //----------------------------------------------------------
 if (message.content.startsWith(`${prefix}help`)){
 
-    message.delete();
-
-    user1 = message.author;
-
-    message.channel.send(`${user1} Посмотри личное сообщение!`).then(msg => {
+    message.delete()
     
     let helpEmbed = new Discord.RichEmbed()
     .setTitle("**КОМАНДЫ БОТА**")
@@ -550,8 +546,7 @@ if (message.content.startsWith(`${prefix}help`)){
     .addField("Измеритель-Совместимости:", "`s!ship <Пользователь>`")
    .setFooter('►СВЕРХКОНФА | s!help', 'https://cdn.discordapp.com/attachments/407984018118672385/490605668274012186/FunDZNs_4.png')
    .setTimestamp(); 
-    return message.author.send(helpEmbed)
-      })
+    return message.channel.send(helpEmbed)
     }
 //-----------------------------------------------------
 
