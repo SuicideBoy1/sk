@@ -19,7 +19,8 @@ const emoji = {
 'GrandTheftAutoV': '503585408307691521',
 'Hearthstone': '503586686513577994',
 'LeagueofLegends': '503582165574090762',
-'RainbowSixSiege': '503582194971836434'
+'RainbowSixSiege': '503582194971836434',
+'Rust': '503582221689683988'
 };
 
 
@@ -42,85 +43,85 @@ bot.on('ready', () => {
 
 bot.on('messageReactionAdd', (reaction, user) => {
 bot.emojis.get('503586881083146260');
-bot.channels.get ('428471923970670592').fetchMessage ('541216302640136202');
+bot.channels.get ('428471923970670592').fetchMessage ('428471923970670592-552233195014324261');
 if (reaction.message.id !== '541216302640136202')
   return ;
   reaction.remove (user);
-if (reaction.emoji.name === '503584722228871169'){
+if (reaction.emoji.name === 'RocketLeague'){
   const member = reaction.message.guild.members.get (user.id);
   member.addRole ('428481013715304448').catch();
 }
-if (reaction.emoji.name === '544117221711151107'){
+if (reaction.emoji.name === 'TabletopSimulator'){
   const member = reaction.message.guild.members.get (user.id);
   member.addRole ('428481130707156992').catch();
 }
 
-if (reaction.emoji.name === '503582039409426442'){
+if (reaction.emoji.name === 'CSGO'){
   const member = reaction.message.guild.members.get (user.id);
   member.addRole ('428481199183364108').catch();
 }
 
-if (reaction.emoji.name === '503582221689683988'){
+if (reaction.emoji.name === 'Minecraft'){
   const member = reaction.message.guild.members.get (user.id);
   member.addRole ('428481238018555906').catch();
 }
 
-if (reaction.emoji.name === '503582018391506954'){
+if (reaction.emoji.name === 'Osu'){
   const member = reaction.message.guild.members.get (user.id);
   member.addRole ('428481261548601344').catch();
 }
 
-if (reaction.emoji.name === '503586881083146260'){
+if (reaction.emoji.name === 'Dota2'){
   const member = reaction.message.guild.members.get (user.id);
   member.addRole ('428481283128295424').catch();
 }
 
-if (reaction.emoji.name === '503582030966292520'){
+if (reaction.emoji.name === 'GarrysMod'){
   const member = reaction.message.guild.members.get (user.id);
   member.addRole ('428481309065609218').catch();
 }
 
-if (reaction.emoji.name === '503582137811730463'){
+if (reaction.emoji.name === 'DuckGame'){
   const member = reaction.message.guild.members.get (user.id);
   member.addRole ('428481362165628928').catch();
 }
 
-if (reaction.emoji.name === '503582123664605195'){
+if (reaction.emoji.name === 'Overwatch'){
   const member = reaction.message.guild.members.get (user.id);
   member.addRole ('428481406600085515').catch();
 }
 
-if (reaction.emoji.name === '503584922028474378'){
+if (reaction.emoji.name === 'PUBG'){
   const member = reaction.message.guild.members.get (user.id);
   member.addRole ('428481459716620288').catch();
 }
 
-if (reaction.emoji.name === '503582093532725270'){
+if (reaction.emoji.name === 'Fortnite'){
   const member = reaction.message.guild.members.get (user.id);
   member.addRole ('428481565702488075').catch();
 }
 
-if (reaction.emoji.name === '503582211472228352'){
+if (reaction.emoji.name === 'GrandTheftAutoV'){
   const member = reaction.message.guild.members.get (user.id);
   member.addRole ('428481635021881344').catch();
 }
 
-if (reaction.emoji.name === '503585408307691521'){
+if (reaction.emoji.name === 'Hearthstone'){
   const member = reaction.message.guild.members.get (user.id);
   member.addRole ('428481686268018697').catch();
 }
 
-if (reaction.emoji.name === '503586686513577994'){
+if (reaction.emoji.name === 'LeagueofLegends'){
   const member = reaction.message.guild.members.get (user.id);
   member.addRole ('428481713157701633').catch();
 }
 
-if (reaction.emoji.name === '503582165574090762'){
+if (reaction.emoji.name === 'RainbowSixSiege'){
   const member = reaction.message.guild.members.get (user.id);
   member.addRole ('428481785551126528').catch();
 }
 
-if (reaction.emoji.name === '503582194971836434'){
+if (reaction.emoji.name === 'Rust'){
   const member = reaction.message.guild.members.get (user.id);
   member.addRole ('428481805792968715').catch();
 }
